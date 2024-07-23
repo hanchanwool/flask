@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>변환 결과</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .segment {
+            margin-top: 20px;
+        }
+        .speaker-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .text {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>변환된 텍스트</h1>
+    {% for segment in speaker_segments %}
+        <div class="segment">
+            <div class="speaker-name">화자 {{ segment.speaker }}:</div>
+            <div class="text">
+                <p>{{ segment.text }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    
+    <a href="/">다시 시도</a>
+</body>
+</html>
